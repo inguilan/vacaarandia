@@ -1,0 +1,91 @@
+/* Estilo global del documento */
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #333; /* Color de texto por defecto */
+  background-color: #f4f4f4; /* Color de fondo claro por defecto */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Estilos para enlaces */
+a {
+  font-weight: 500;
+  color: #007bff; /* Color principal de enlaces */
+  text-decoration: none;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+a:hover {
+  color: #0056b3; /* Color al pasar el ratón */
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos generales del cuerpo */
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Estilos para el encabezado principal */
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: var(--heading-color);
+}
+
+/* Estilos para botones */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--button-background);
+  color: var(--button-text);
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
+}
+button:hover {
+  border-color: #007bff; /* Color del borde al pasar el ratón */
+  background-color: #0056b3; /* Color de fondo al pasar el ratón */
+  transform: scale(1.05);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Estilos para el modo oscuro */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #242424;
+    --text-color: rgba(8, 1, 1, 0.87);
+    --heading-color: #ffffff;
+    --button-background: #1a1a1a;
+    --button-text: #ffffff;
+  }
+}
+
+/* Estilos para el modo claro */
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-color: #ffffff;
+    --text-color: #213547;
+    --heading-color: #000000;
+    --button-background: #f9f9f9;
+    --button-text: #000000;
+  }
+}
